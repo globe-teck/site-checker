@@ -10,3 +10,7 @@ sitecheck = "sitecheck.cli:main"
 
 [tool.setuptools]
 packages = ["sitecheck"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
