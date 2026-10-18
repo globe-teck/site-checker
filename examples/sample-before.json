@@ -1,0 +1,55 @@
+{
+  "sample": true,
+  "tool": "sitecheck",
+  "url": "https://example.com/",
+  "checked_at": "2026-01-05T15:00:00+00:00",
+  "note": "SAMPLE DATA: illustrative values, not a real scan of example.com",
+  "summary": {
+    "PASS": 1,
+    "WARN": 3,
+    "PARTIAL": 1,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "http",
+      "status": "PASS",
+      "detail": "HTTP 200 in 212 ms (single sample)",
+      "data": {}
+    },
+    {
+      "name": "tls",
+      "status": "WARN",
+      "detail": "Certificate expires in 12 days",
+      "data": {}
+    },
+    {
+      "name": "security_headers",
+      "status": "PARTIAL",
+      "detail": "1/6 security headers enforced",
+      "data": {
+        "headers": {
+          "strict-transport-security": "FAIL",
+          "content-security-policy": "FAIL",
+          "x-content-type-options": "PASS",
+          "x-frame-options": "FAIL",
+          "referrer-policy": "FAIL",
+          "permissions-policy": "FAIL"
+        }
+      }
+    },
+    {
+      "name": "broken_links",
+      "status": "WARN",
+      "detail": "2 broken of 18 links checked on this page",
+      "data": {}
+    },
+    {
+      "name": "https_redirect",
+      "status": "WARN",
+      "detail": "http:// redirects to https (302); temporary redirect, permanent (301/308) preferred",
+      "data": {}
+    }
+  ]
+}
