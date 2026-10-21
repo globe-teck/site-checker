@@ -70,5 +70,10 @@ report-only, and the report says so instead of calling it a pass.
 - A PASS means the check found nothing wrong, not that the site is "secure".
 - Header checks look for presence, not policy quality.
 
+## Authorship
+
+Built with AI coding assistance. I defined the requirements, ran the tests, and reviewed the changes.
+
 ## License
-MIT
+
+MIT. See [LICENSE](LICENSE).
